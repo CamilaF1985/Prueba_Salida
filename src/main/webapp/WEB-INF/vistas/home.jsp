@@ -14,24 +14,31 @@
     <!-- Enlace a los estilos personalizados -->
     <link rel="stylesheet" type="text/css" href="/pruebaSalida/res/css/styles.css">
     
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Barra de navegación -->
     <%@ include file="navbar.jsp"%>
 
     <!-- Contenido principal -->
-    <div class="container mt-4">
-        <div class="row">
-            <div class="col-lg-8 col-md-10 mx-auto">
-<h1 class="text-center prueba-titulo">Prueba de Salida</h1>
-
-                <!-- Aquí puedes agregar más contenido -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1 class="prueba-titulo">Prueba de Salida</h1>
+                    <p class="lead">Este es un párrafo de prueba para mostrar cómo agregar contenido en la página de inicio.</p>
+                </div>
+                <div class="col-md-4">
+                    <!-- Columna vacía en la derecha -->
+                </div>
             </div>
         </div>
     </div>
+</div>
+
 
     <!-- Footer -->
     <%@ include file="footer.jsp"%>
@@ -45,5 +52,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
 

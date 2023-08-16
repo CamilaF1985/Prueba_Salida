@@ -13,11 +13,13 @@
 </head>
 <body>
 
+<div class="footer-content">
 <div class="main-content">
 <div class="mt-5 pt-5 pb-5 footer">
 
   <div class="row">
-    <div class="col-lg-5 col-xs-12 about-company">
+<div class="col-lg-5 col-xs-12 about-company">
+
       <h2>Heading</h2>
       <p class="pr-5 text-white-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac ante mollis quam tristique convallis </p>
       <p><a href="#"><i class="fa fa-facebook-square mr-1"></i></a><a href="#"><i class="fa fa-linkedin-square"></i></a></p>
@@ -41,10 +43,11 @@
     </div>
   </div>
   <div class="row mt-5">
-    <div class="col copyright">
+    <div class="col d-flex align-items-center justify-content-center">
       <p class=""><small class="text-white-50">© 2019. All Rights Reserved.</small></p>
     </div>
   </div>
+</div>
 </div>
 </div>
 

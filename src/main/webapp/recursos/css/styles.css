@@ -1,8 +1,3 @@
-/* Estilos personalizados para la barra de navegación */
-.navbar-custom {
-    background-color: rgb(64, 0, 128);
-}
-
 /* Reset de estilos */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -10,49 +5,68 @@
     padding: 0;
 }
 
+/* Estilos personalizados para la barra de navegación */
+.navbar-custom {
+    background-color: rgb(64, 0, 128);
+}
+
+/* Estilos generales del cuerpo */
+body {
+    margin-top: 0;
+    position: relative; /* Asegura que el contenido superpuesto esté posicionado correctamente */
+    background-size: cover;
+    background-position: top;
+}
+
+/* Fondo con opacidad */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://img.freepik.com/vector-premium/fondo-purpura-desarrollo-web_76964-167.jpg?w=1060');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6; /* Ajusta el valor para cambiar la opacidad de la imagen */
+    z-index: -1; /* Coloca el pseudo-elemento detrás del contenido */
+}
+
 /* Estilos para encabezados h1 */
 h1 {
     color: rgb(64, 0, 64);
 }
 
-.prueba-titulo {
-    text-align: center;
-    font-family: 'Lora', serif; /* Utiliza el nombre de la fuente */
-    font-weight: 700; /* Peso de la fuente (si aplica) */
-    /* Otros estilos que desees agregar */
+/* Estilos para labels */
+form label {
+    color: rgb(64, 0, 64);
+    font-family: 'Lora', serif;
+    font-weight: 400;
 }
 
-/* Aplicar fuente 'Lora' a los elementos con clase 'tituloContacto' */
+/* Estilos de títulos y fuente 'Lora' */
+.prueba-titulo,
 .tituloContacto {
+    text-align: left;
     font-family: 'Lora', serif;
-    font-weight: 700; /* Peso de la fuente (si aplica) */
-    /* Otros estilos que desees agregar */
+    font-weight: 700;
 }
 
-/* Aplicar fuente 'Lora' a los elementos 'label' dentro del formulario */
-.form label {
-    font-family: 'Lora', serif;
-    font-weight: 400; /* Peso de la fuente (si aplica) */
-    /* Otros estilos que desees agregar */
+/* Margen superior para el título de contacto */
+.tituloContacto {
+    margin-top: 30px;
 }
-
 
 /* Agregar margen superior a la clase 'contacto' */
 .contacto {
-    margin-top: 30px; /* Ajusta el valor según lo necesites */
+    margin-top: 0px; /* Ajusta el valor según lo necesites */
 }
 
 /* Añadir espacio entre el campo de nombre de usuario y el label de contraseña */
 .form .campo {
     margin-bottom: 15px; /* Ajusta el valor según lo necesites */
 }
-
-
-/* Cambiar el color de fondo de la página de inicio */
-body {
-    background-color: rgb(237, 219, 255); /* Cambia el color a tu preferencia */
-}
-
 
 /* Estilos personalizados para el footer */
 .footer {
@@ -67,10 +81,25 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-    margin-top: 20px; /* Agrega esto para que el contenido tenga margen superior automático */
+    min-height: 80vh;
+    margin-top: 60px; /* Agrega esto para que el contenido tenga margen superior automático */
 }
+
+/* Agregar margen izquierdo al contenido principal */
+.col-md-8 {
+    margin-left: 10px; /* Ajusta el valor según lo necesites */
+}
+
+/* Ajustes para la columna vacía en la derecha */
+.col-md-4 {
+    height: 100%; /* Para que la columna tenga la misma altura que el contenido */
+    padding: 15px; /* Espaciado interno de la columna */
+}
+
+
+
+
+
 
 
 
