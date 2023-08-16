@@ -1,0 +1,88 @@
+/* Estilos personalizados para la barra de navegación */
+.navbar-custom {
+    background-color: rgb(64, 0, 128);
+}
+
+/* Reset de estilos */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para encabezados h1 */
+h1 {
+    color: rgb(64, 0, 64);
+}
+
+.prueba-titulo {
+    text-align: center;
+    font-family: 'Lora', serif; /* Utiliza el nombre de la fuente */
+    font-weight: 700; /* Peso de la fuente (si aplica) */
+    /* Otros estilos que desees agregar */
+}
+
+/* Aplicar fuente 'Lora' a los elementos con clase 'tituloContacto' */
+.tituloContacto {
+    font-family: 'Lora', serif;
+    font-weight: 700; /* Peso de la fuente (si aplica) */
+    /* Otros estilos que desees agregar */
+}
+
+/* Aplicar fuente 'Lora' a los elementos 'label' dentro del formulario */
+.form label {
+    font-family: 'Lora', serif;
+    font-weight: 400; /* Peso de la fuente (si aplica) */
+    /* Otros estilos que desees agregar */
+}
+
+
+/* Agregar margen superior a la clase 'contacto' */
+.contacto {
+    margin-top: 30px; /* Ajusta el valor según lo necesites */
+}
+
+/* Añadir espacio entre el campo de nombre de usuario y el label de contraseña */
+.form .campo {
+    margin-bottom: 15px; /* Ajusta el valor según lo necesites */
+}
+
+
+/* Cambiar el color de fondo de la página de inicio */
+body {
+    background-color: rgb(237, 219, 255); /* Cambia el color a tu preferencia */
+}
+
+
+/* Estilos personalizados para el footer */
+.footer {
+    background-color: rgb(67, 44, 92);
+    color: white;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    width: 100%;
+}
+
+/* Estilos personalizados para el contenedor principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    margin-top: 20px; /* Agrega esto para que el contenido tenga margen superior automático */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
