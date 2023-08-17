@@ -131,3 +131,65 @@ form label {
 	padding: 15px;
 	/* Espaciado interno de la columna */
 }
+
+/* Añadir margen superior y centrar el formulario y el listado */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrar verticalmente */
+    min-height: 80vh;
+    margin-top: 60px;
+}
+
+/* Estilos para el formulario */
+.form-control {
+    font-family: 'Lora', serif; /* Aplicar la fuente 'Lora' */
+}
+
+/* Estilos para el formulario */
+.form-control {
+    font-family: 'Lora', serif;
+}
+
+/* Estilos para la tabla */
+.table {
+    font-family: 'Lora', serif;
+    color: rgb(64, 0, 64);
+}
+
+/* Estilos para los encabezados de la tabla */
+.table thead th {
+    background-color: rgb(64, 0, 128);
+    color: white;
+}
+
+/* Estilos para las celdas de datos (td) en la tabla */
+.table tbody td {
+    background-color: rgba(64, 0, 128, 0.1);
+    padding: 8px;
+}
+
+/* Estilos de fuente 'Lora' para títulos y detalles */
+.tituloClinica,
+.tituloDetalle {
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    color: rgb(64, 0, 64);
+}
+
+/* Agregar espacio entre los detalles */
+.detalleHistoria {
+    margin-bottom: 20px;
+}
+
+/* Estilos para las líneas divisorias */
+.hrDetalle {
+    border: none;
+    border-top: 1px solid rgba(64, 0, 64, 0.5);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+

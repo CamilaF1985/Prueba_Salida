@@ -1,5 +1,7 @@
 package model.entity;
 
+import java.util.List;
+
 import javax.persistence.*;
 
 @Entity
@@ -23,6 +25,9 @@ public class Doctor {
     @OneToOne
     @JoinColumn(name = "id_usuario")
     private Usuario usuario;
+    
+    @OneToMany(mappedBy = "doctor", cascade = CascadeType.ALL)
+    private List<HistoriaClinica> historiasClinicas;
 
     // Constructor, getters y setters
 
