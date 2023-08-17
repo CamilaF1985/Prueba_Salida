@@ -14,7 +14,8 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-expand-md navbar-expand-s navbar-dark navbar-custom">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+<a class="navbar-brand" href="#">Clínica Salud</a>
+
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -24,7 +25,7 @@
                     <a class="nav-link" href="login">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link" href="verCitas">Ver Citas</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>

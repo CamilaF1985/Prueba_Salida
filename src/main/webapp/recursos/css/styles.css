@@ -1,117 +1,133 @@
 /* Reset de estilos */
-*, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 /* Estilos personalizados para la barra de navegación */
 .navbar-custom {
-    background-color: rgb(64, 0, 128);
+	background-color: rgb(64, 0, 128);
 }
 
 /* Estilos generales del cuerpo */
 body {
-    margin-top: 0;
-    position: relative; /* Asegura que el contenido superpuesto esté posicionado correctamente */
-    background-size: cover;
-    background-position: top;
+	margin-top: 0;
+	position: relative;
+	/* Asegura que el contenido superpuesto esté posicionado correctamente */
+	background-size: cover;
+	background-position: top;
 }
 
 /* Fondo con opacidad */
 body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('https://img.freepik.com/vector-premium/fondo-purpura-desarrollo-web_76964-167.jpg?w=1060');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.6; /* Ajusta el valor para cambiar la opacidad de la imagen */
-    z-index: -1; /* Coloca el pseudo-elemento detrás del contenido */
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(https://img.freepik.com/fotos-premium/interior-hospital-clinica-fondo-paciente-filtro-vintage-esperando-ver-al-medico_43780-5731.jpg?w=900);
+	background-size: cover;
+	background-position: center;
+	opacity: 0.6;
+	/* Ajusta el valor para cambiar la opacidad de la imagen */
+	z-index: -1;
+	/* Coloca el pseudo-elemento detrás del contenido */
 }
 
 /* Estilos para encabezados h1 */
 h1 {
-    color: rgb(64, 0, 64);
+	color: rgb(64, 0, 64);
 }
 
 /* Estilos para labels */
 form label {
-    color: rgb(64, 0, 64);
-    font-family: 'Lora', serif;
-    font-weight: 400;
+	color: rgb(64, 0, 64);
+	font-family: 'Lora', serif;
+	font-weight: 400;
 }
 
 /* Estilos de títulos y fuente 'Lora' */
 .prueba-titulo,
 .tituloContacto {
-    text-align: left;
-    font-family: 'Lora', serif;
-    font-weight: 700;
+	text-align: left;
+	font-family: 'Lora', serif;
+	font-weight: 700;
 }
 
 /* Margen superior para el título de contacto */
 .tituloContacto {
-    margin-top: 30px;
+	margin-top: 30px;
 }
 
 /* Agregar margen superior a la clase 'contacto' */
 .contacto {
-    margin-top: 0px; /* Ajusta el valor según lo necesites */
+	margin-top: 0px;
+	/* Ajusta el valor según lo necesites */
 }
 
 /* Añadir espacio entre el campo de nombre de usuario y el label de contraseña */
 .form .campo {
-    margin-bottom: 15px; /* Ajusta el valor según lo necesites */
+	margin-bottom: 15px;
+	/* Ajusta el valor según lo necesites */
 }
+
+/* Estilos para la tabla */
+.table {
+	font-family: 'Lora', serif;
+	/* Aplicar la fuente 'Lora' a la tabla */
+	color: rgb(64, 0, 64);
+	/* Cambiar el color del texto en la tabla */
+}
+
+/* Estilos para las celdas de encabezado (th) */
+.table thead th {
+	background-color: rgb(64, 0, 128);
+	/* Cambiar el color de fondo de las celdas de encabezado */
+	color: white;
+	/* Cambiar el color del texto en las celdas de encabezado */
+}
+
+/* Estilos para las celdas de datos (td) */
+.table tbody td {
+	background-color: rgba(64, 0, 128, 0.1);
+	/* Cambiar el color de fondo de las celdas de datos */
+	padding: 8px;
+	/* Añadir espaciado interno a las celdas de datos */
+}
+
 
 /* Estilos personalizados para el footer */
 .footer {
-    background-color: rgb(67, 44, 92);
-    color: white;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    width: 100%;
+	background-color: rgb(67, 44, 92);
+	color: white;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	width: 100%;
 }
 
 /* Estilos personalizados para el contenedor principal */
 .container {
-    display: flex;
-    flex-direction: column;
-    min-height: 80vh;
-    margin-top: 60px; /* Agrega esto para que el contenido tenga margen superior automático */
+	display: flex;
+	flex-direction: column;
+	min-height: 80vh;
+	margin-top: 60px;
+	/* Agrega esto para que el contenido tenga margen superior automático */
 }
 
 /* Agregar margen izquierdo al contenido principal */
 .col-md-8 {
-    margin-left: 10px; /* Ajusta el valor según lo necesites */
+	margin-left: 10px;
+	/* Ajusta el valor según lo necesites */
 }
 
 /* Ajustes para la columna vacía en la derecha */
 .col-md-4 {
-    height: 100%; /* Para que la columna tenga la misma altura que el contenido */
-    padding: 15px; /* Espaciado interno de la columna */
+	height: 100%;
+	/* Para que la columna tenga la misma altura que el contenido */
+	padding: 15px;
+	/* Espaciado interno de la columna */
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
