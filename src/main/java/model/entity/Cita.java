@@ -25,7 +25,7 @@ public class Cita {
     @ManyToOne
     @JoinColumn(name = "Factura_ID")
     private Factura factura;
-
+    
     // Constructor, getters y setters
 
     public Cita() {
@@ -80,5 +80,6 @@ public class Cita {
     public void setFactura(Factura factura) {
         this.factura = factura;
     }
+    
 }
 

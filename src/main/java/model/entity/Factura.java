@@ -1,7 +1,6 @@
 package model.entity;
 
 import javax.persistence.*;
-import java.math.BigDecimal;
 import java.util.Date;
 
 @Entity
@@ -13,7 +12,7 @@ public class Factura {
     private Long id;
 
     @Column(name = "Monto")
-    private BigDecimal monto;
+    private Double monto;
 
     @Column(name = "Fecha_Pago")
     private Date fechaPago;
@@ -23,7 +22,7 @@ public class Factura {
     public Factura() {
     }
 
-    public Factura(Long id, BigDecimal monto, Date fechaPago) {
+    public Factura(Long id, Double monto, Date fechaPago) {
         this.id = id;
         this.monto = monto;
         this.fechaPago = fechaPago;
@@ -39,11 +38,11 @@ public class Factura {
         this.id = id;
     }
 
-    public BigDecimal getMonto() {
+    public Double getMonto() {
         return monto;
     }
 
-    public void setMonto(BigDecimal monto) {
+    public void setMonto(Double monto) {
         this.monto = monto;
     }
 
