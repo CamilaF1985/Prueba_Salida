@@ -4,6 +4,16 @@ CREATE DATABASE prueba;
 -- Crear el usuario
 CREATE USER 'admin'@'localhost' IDENTIFIED BY '12345';
 
+-- Crear tabla usuarios
+CREATE TABLE usuarios (
+    id INT PRIMARY KEY,
+    user VARCHAR(50),
+    password VARCHAR(100),
+    rol VARCHAR(20),
+    email VARCHAR(100),
+    tipo ENUM('Paciente', 'Doctor') NOT NULL
+);
+
 -- Crear la tabla Pacientes
 CREATE TABLE Pacientes (
     ID INT PRIMARY KEY,
@@ -56,6 +66,14 @@ CREATE TABLE Historia_Clinica (
     FOREIGN KEY (Doctor_ID) REFERENCES Doctores(ID)
 );
 
+-- Insertar usuarios para los doctores
+INSERT INTO usuarios (id, user, password, rol, email, tipo)
+VALUES
+(1, 'ramirez', '$2a$12$SwioMN5fx7J1pmYwgoeZpeeO3kL0uoxcCQk5Qq0aNM8V3NpukYjp.', 'ROLE_doctor', 'ramirez@gmail.com', 'Doctor'),
+(2, 'rodriguez', '$2a$12$SwioMN5fx7J1pmYwgoeZpeeO3kL0uoxcCQk5Qq0aNM8V3NpukYjp.', 'ROLE_doctor', 'rodriguez@gmail.com', 'Doctor'),
+(3, 'fernandez', '$2a$12$SwioMN5fx7J1pmYwgoeZpeeO3kL0uoxcCQk5Qq0aNM8V3NpukYjp.', 'ROLE_doctor', 'fernandez@gmail.com', 'Doctor'),
+(4, 'gonzalez', '$2a$12$SwioMN5fx7J1pmYwgoeZpeeO3kL0uoxcCQk5Qq0aNM8V3NpukYjp.', 'ROLE_doctor', 'gonzalez@gmail.com', 'Doctor'),
+(5, 'sanchez', '$2a$12$SwioMN5fx7J1pmYwgoeZpeeO3kL0uoxcCQk5Qq0aNM8V3NpukYjp.', 'ROLE_doctor', 'sanchez@gmail.com', 'Doctor');
 
 -- Rellenar la tabla Pacientes
 INSERT INTO Pacientes (ID, Nombre, Fecha_Nacimiento) VALUES
@@ -120,6 +138,75 @@ INSERT INTO Historia_Clinica (ID, Paciente_ID, Doctor_ID, Fecha_Cita, Sintomas, 
 (9, 4, 5, '2023-08-02', 'Pérdida de peso', 'Cáncer', 'Quimioterapia'),
 (10, 5, 1, '2023-08-03', 'Palpitaciones', 'Arritmia', 'Medicación');
 
+-- Agregar columna id_usuario a la tabla Pacientes
+ALTER TABLE Pacientes
+ADD COLUMN id_usuario INT,
+ADD FOREIGN KEY (id_usuario) REFERENCES usuarios(id);
+
+-- Agregar columna id_usuario a la tabla Doctores
+ALTER TABLE Doctores
+ADD COLUMN id_usuario INT,
+ADD FOREIGN KEY (id_usuario) REFERENCES usuarios(id);
+
+-- Insertar usuarios para los doctores
+INSERT INTO usuarios (id, user, password, rol, email, tipo)
+VALUES
+(1, 'ramirez', '$2a$12$SwioMN5fx7J1pmYwgoeZpeeO3kL0uoxcCQk5Qq0aNM8V3NpukYjp.', 'ROLE_doctor', 'ramirez@gmail.com', 'Doctor'),
+(2, 'rodriguez', '$2a$12$SwioMN5fx7J1pmYwgoeZpeeO3kL0uoxcCQk5Qq0aNM8V3NpukYjp.', 'ROLE_doctor', 'rodriguez@gmail.com', 'Doctor'),
+(3, 'fernandez', '$2a$12$SwioMN5fx7J1pmYwgoeZpeeO3kL0uoxcCQk5Qq0aNM8V3NpukYjp.', 'ROLE_doctor', 'fernandez@gmail.com', 'Doctor'),
+(4, 'gonzalez', '$2a$12$SwioMN5fx7J1pmYwgoeZpeeO3kL0uoxcCQk5Qq0aNM8V3NpukYjp.', 'ROLE_doctor', 'gonzalez@gmail.com', 'Doctor'),
+(5, 'sanchez', '$2a$12$SwioMN5fx7J1pmYwgoeZpeeO3kL0uoxcCQk5Qq0aNM8V3NpukYjp.', 'ROLE_doctor', 'sanchez@gmail.com', 'Doctor');
+
+-- Asignar los valores correspondientes a id_usuario
+UPDATE Doctores SET id_usuario = 1 WHERE ID = 1;  -- Asociar a Dr. Ramírez
+UPDATE Doctores SET id_usuario = 2 WHERE ID = 2;
+UPDATE Doctores SET id_usuario = 3 WHERE ID = 3;  
+UPDATE Doctores SET id_usuario = 4 WHERE ID = 4;
+UPDATE Doctores SET id_usuario = 5 WHERE ID = 5;
+
+-- Desactivar temporalmente las restricciones de llave foranea
+SET FOREIGN_KEY_CHECKS = 0;
+
+-- Modificar la columna ID en la tabla Pacientes
+ALTER TABLE Pacientes MODIFY COLUMN ID INT AUTO_INCREMENT;
+
+-- Modificar la columna ID en la tabla Usuarios
+ALTER TABLE usuarios MODIFY COLUMN ID INT AUTO_INCREMENT;
+
+-- Modificar la columna ID en la tabla Especialidades
+ALTER TABLE Especialidades MODIFY COLUMN ID INT AUTO_INCREMENT;
+
+-- Modificar la columna ID en la tabla Doctores
+ALTER TABLE Doctores MODIFY COLUMN ID INT AUTO_INCREMENT;
+
+-- Modificar la columna ID en la tabla Facturas
+ALTER TABLE Facturas MODIFY COLUMN ID INT AUTO_INCREMENT;
+
+-- Modificar la columna ID en la tabla Citas
+ALTER TABLE Citas MODIFY COLUMN ID INT AUTO_INCREMENT;
+
+-- Modificar la columna ID en la tabla Historia_Clinica
+ALTER TABLE Historia_Clinica MODIFY COLUMN ID INT AUTO_INCREMENT;
+
+-- Reactivar las restricciones de llave foranea
+SET FOREIGN_KEY_CHECKS = 1;
+
+-- Insertar usuarios para los pacientes
+INSERT INTO usuarios (user, password, rol, email, tipo)
+VALUES
+('jperez', '$2a$12$SwioMN5fx7J1pmYwgoeZpeeO3kL0uoxcCQk5Qq0aNM8V3NpukYjp.', 'ROLE_paciente', 'perez@gmail.com', 'Paciente'),
+('mlopez', '$2a$12$SwioMN5fx7J1pmYwgoeZpeeO3kL0uoxcCQk5Qq0aNM8V3NpukYjp.', 'ROLE_paciente', 'lopez@gmail.com', 'Paciente'),
+('jgarcia', '$2a$12$SwioMN5fx7J1pmYwgoeZpeeO3kL0uoxcCQk5Qq0aNM8V3NpukYjp.', 'ROLE_paciente', 'garcia@gmail.com', 'Paciente'),
+('mgonzalez', '$2a$12$SwioMN5fx7J1pmYwgoeZpeeO3kL0uoxcCQk5Qq0aNM8V3NpukYjp.', 'ROLE_paciente', 'gonzalez@gmail.com', 'Paciente'),
+('lfernandez', '$2a$12$SwioMN5fx7J1pmYwgoeZpeeO3kL0uoxcCQk5Qq0aNM8V3NpukYjp.', 'ROLE_paciente', 'fernandez@gmail.com', 'Paciente');
+
+-- Asignar los valores correspondientes a id_usuario para los pacientes
+UPDATE Pacientes SET id_usuario = 6 WHERE ID = 1;  -- Asociar a Juan Pérez
+UPDATE Pacientes SET id_usuario = 7 WHERE ID = 2;  -- Asociar a María López
+UPDATE Pacientes SET id_usuario = 8 WHERE ID = 3;  -- Asociar a José García
+UPDATE Pacientes SET id_usuario = 9 WHERE ID = 4;  -- Asociar a Marta González
+UPDATE Pacientes SET id_usuario = 10 WHERE ID = 5;  -- Asociar a Luisa Fernández
+
 -- Consulta 1
 SELECT C.ID AS ID_Cita, P.Nombre AS NombrePaciente, D.Nombre AS NombreDoctor
 FROM Citas AS C
@@ -155,6 +242,11 @@ FROM Doctores AS D
 LEFT JOIN Citas AS C ON D.ID = C.Doctor_ID
 GROUP BY D.ID, D.Nombre
 ORDER BY CantidadPacientesAtendidos DESC;
+
+
+
+
+
 
 
 

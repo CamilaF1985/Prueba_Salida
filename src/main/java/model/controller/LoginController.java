@@ -24,19 +24,19 @@ public class LoginController {
 
 
     // Método para verificar si el usuario tiene el rol "cliente"
-    private boolean isCliente() {
+    private boolean isPaciente() {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         if (auth != null) {
-            return auth.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("ROLE_CLIENTE"));
+            return auth.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("ROLE_PACIENTE"));
         }
         return false;
     }
 
     // Método para verificar si el usuario tiene el rol "administrador"
-    private boolean isAdministrador() {
+    private boolean isDoctor() {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         if (auth != null) {
-            return auth.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("ROLE_ADMINISTRADOR"));
+            return auth.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("ROLE_DOCTOR"));
         }
         return false;
     }
