@@ -1,5 +1,7 @@
 package model.service;
 
+import java.util.List;
+
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,5 +42,15 @@ public class HistoriaClinicaService {
             throw new RuntimeException("Historia clínica no encontrada");
         }
     }
+    
+    @Transactional
+    public List<HistoriaClinica> findByPacienteNombre(String nombrePaciente) {
+        return historiaClinicaRepository.findByPacienteNombre(nombrePaciente);
+    }
+
+    public List<HistoriaClinica> findAll() {
+        return historiaClinicaRepository.findAllHistoriasClinicas();
+    }
 }
+
 

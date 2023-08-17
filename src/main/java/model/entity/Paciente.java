@@ -1,6 +1,7 @@
 package model.entity;
 
 import java.sql.Date;
+import java.util.List;
 
 import javax.persistence.*;
 
@@ -21,6 +22,9 @@ public class Paciente {
     @OneToOne
     @JoinColumn(name = "id_usuario")
     private Usuario usuario;
+    
+    @OneToMany(mappedBy = "paciente", cascade = CascadeType.ALL)
+    private List<HistoriaClinica> historiasClinicas;
 
     // Constructor, getters y setters
 
