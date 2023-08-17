@@ -10,12 +10,12 @@
 
 	<!-- Configuración de seguridad -->
 	<http auto-config="true">
-		<intercept-url pattern="/carta"
-			access="hasAnyAuthority('ROLE_cliente')" />
-		<intercept-url pattern="/crearPedido"
-			access="hasAnyAuthority('ROLE_cliente')" />
-		<intercept-url pattern="/verPedidos"
-			access="hasAnyAuthority('ROLE_administrador')" />
+		<intercept-url pattern="/verCitas"
+			access="hasAnyAuthority('ROLE_doctor')" />
+		<intercept-url pattern="/verHistoriasClinicas"
+			access="hasAnyAuthority('ROLE_doctor')" />
+		<intercept-url pattern="/verDoctores"
+			access="hasAnyAuthority('ROLE_paciente')" />
 		<intercept-url pattern="/logout" access="permitAll" /> <!-- Permitir acceso a todos -->
 		<intercept-url pattern="/" access="permitAll" />
 		<form-login login-page="/login"

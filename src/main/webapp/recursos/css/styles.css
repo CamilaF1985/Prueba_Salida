@@ -7,6 +7,8 @@
 	padding: 0;
 }
 
+
+
 /* Estilos personalizados para la barra de navegación */
 .navbar-custom {
 	background-color: rgb(64, 0, 128);
@@ -41,7 +43,16 @@ body::before {
 /* Estilos para encabezados h1 */
 h1 {
 	color: rgb(64, 0, 64);
+	margin-bottom: 10px;
 }
+
+/* Estilos para la clase .lead */
+.lead {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    color: rgb(64, 0, 64);
+}
+
 
 /* Estilos para labels */
 form label {
@@ -122,14 +133,6 @@ form label {
 .col-md-8 {
 	margin-left: 10px;
 	/* Ajusta el valor según lo necesites */
-}
-
-/* Ajustes para la columna vacía en la derecha */
-.col-md-4 {
-	height: 100%;
-	/* Para que la columna tenga la misma altura que el contenido */
-	padding: 15px;
-	/* Espaciado interno de la columna */
 }
 
 /* Añadir margen superior y centrar el formulario y el listado */

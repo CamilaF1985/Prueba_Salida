@@ -243,6 +243,11 @@ LEFT JOIN Citas AS C ON D.ID = C.Doctor_ID
 GROUP BY D.ID, D.Nombre
 ORDER BY CantidadPacientesAtendidos DESC;
 
+SELECT * FROM historia_clinica hc
+JOIN pacientes p ON hc.Paciente_ID = p.ID
+WHERE p.Nombre = 'Luisa Fernández';
+
+
 
 
 
