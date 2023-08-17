@@ -29,10 +29,8 @@ Este es un proyecto de una aplicación web desarrollada utilizando el framework 
    - Visualización de información de doctores.
    - Asociación de doctores con usuarios.
 
-4. Gestión de Citas:
-   - Programación de citas médicas.
-   - Asignación de pacientes y doctores a citas.
-   - Visualización de calendario de citas.
+4. **Gestión de Citas (Aún no implementada):**
+   - *Nota: La función para agendar citas aún no se ha implementado, pero podría ser considerada para implementación futura.*
 
 5. Historias Clínicas:
    - Registro de historias clínicas para pacientes.
