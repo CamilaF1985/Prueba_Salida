@@ -1,14 +1,11 @@
 package model.controller;
 
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class LoginController {
-
 
     // Método para cargar la página de login
     @RequestMapping(value = "/login")
@@ -22,25 +19,9 @@ public class LoginController {
         return new ModelAndView("login", "error", "true");
     }
 
-
-    // Método para verificar si el usuario tiene el rol "cliente"
-    private boolean isPaciente() {
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        if (auth != null) {
-            return auth.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("ROLE_PACIENTE"));
-        }
-        return false;
-    }
-
-    // Método para verificar si el usuario tiene el rol "administrador"
-    private boolean isDoctor() {
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        if (auth != null) {
-            return auth.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("ROLE_DOCTOR"));
-        }
-        return false;
-    }
 }
+
+
 
 
 
