@@ -36,6 +36,11 @@ public class DoctorService {
     public void update(Doctor doctor) {
         doctorRepository.save(doctor);
     }
+    
+    @Transactional
+    public List<Doctor> getDoctoresWithEspecialidad() {
+        return doctorRepository.findAllWithEspecialidad();
+    }
 
     @Transactional
     public Long getDoctorIdFromDatabase(Long doctorId) {
