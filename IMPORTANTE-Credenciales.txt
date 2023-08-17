@@ -1,0 +1,2 @@
+-Para obtener los nombres de usuarios de pacientes y doctores, por favor consultar la nueva tabla usuarios.
+-La contraseña para todos los usuarios de la base de datos es: 1234

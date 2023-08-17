@@ -28,6 +28,7 @@ public class Doctor {
     
     @OneToMany(mappedBy = "doctor", cascade = CascadeType.ALL)
     private List<HistoriaClinica> historiasClinicas;
+    
 
     // Constructor, getters y setters
 
@@ -81,4 +82,5 @@ public class Doctor {
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
+    
 }

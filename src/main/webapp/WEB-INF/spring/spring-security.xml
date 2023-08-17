@@ -11,10 +11,12 @@
 	<!-- Configuración de seguridad -->
 	<http auto-config="true">
 		<intercept-url pattern="/verCitas"
-			access="hasAnyAuthority('ROLE_doctor')" />
+			access="hasAnyAuthority('ROLE_paciente')" />
 		<intercept-url pattern="/verHistoriasClinicas"
 			access="hasAnyAuthority('ROLE_doctor')" />
 		<intercept-url pattern="/verDoctores"
+			access="hasAnyAuthority('ROLE_paciente')" />
+		<intercept-url pattern="/agendarCita"
 			access="hasAnyAuthority('ROLE_paciente')" />
 		<intercept-url pattern="/logout" access="permitAll" /> <!-- Permitir acceso a todos -->
 		<intercept-url pattern="/" access="permitAll" />

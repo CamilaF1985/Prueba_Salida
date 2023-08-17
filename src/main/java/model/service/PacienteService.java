@@ -36,6 +36,11 @@ public class PacienteService {
     public void update(Paciente paciente) {
         pacienteRepository.save(paciente);
     }
+    
+    @Transactional
+    public Paciente getPacienteByUserName(String user) {
+        return pacienteRepository.findPacienteByUsuarioUser(user);
+    }
 
     @Transactional
     public Long getPacienteIdFromDatabase(Long pacienteId) {

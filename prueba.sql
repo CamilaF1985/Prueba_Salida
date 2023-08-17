@@ -243,9 +243,27 @@ LEFT JOIN Citas AS C ON D.ID = C.Doctor_ID
 GROUP BY D.ID, D.Nombre
 ORDER BY CantidadPacientesAtendidos DESC;
 
+-- Consulta adicional para obtener el historial clinico por el nombre del paciente 
 SELECT * FROM historia_clinica hc
 JOIN pacientes p ON hc.Paciente_ID = p.ID
 WHERE p.Nombre = 'Luisa Fernández';
+
+-- Consulta adicional para obtener el paciente por el nombre de usuario
+SELECT p.* FROM Pacientes p
+INNER JOIN usuarios u ON p.id_usuario = u.id
+WHERE u.user = 'jperez';
+
+-- Consulta adicional para obtener la especialidad asociada a un doctor
+SELECT d.ID AS DoctorID, d.Nombre AS DoctorNombre, e.Nombre AS EspecialidadNombre
+FROM Doctores d
+JOIN Especialidades e ON d.Especialidad_ID = e.ID
+WHERE d.Especialidad_ID = e.ID;
+
+
+
+
+
+
 
 
 
